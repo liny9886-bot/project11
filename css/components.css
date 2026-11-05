@@ -1,0 +1,28 @@
+/* css/rwd.css */
+@media (max-width: 768px) {
+  .site-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr;
+    grid-template-areas: 
+      "header"
+      "sidebar"
+      "main";
+  }
+  
+  .site-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+  }
+  
+  .site-sidebar ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  
+  .site-sidebar li a {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城覓綠舟 | 臺中公園影展專題介紹</title>
+    <meta name="description" content="逢甲大學大二影展專題，深入探索臺中公園的簡介、歷史文化與景點特色。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fffafb; color: #4a3b40; line-height: 1.7; display: flex; min-height: 100vh; flex-direction: column; }
+        
+        /* 頂部導覽列 (分頁切換與外部連結) */
+        header { background-color: #bc657e; color: white; padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1100; box-shadow: 0 2px 5px rgba(212, 122, 148, 0.15); }
+        header nav { display: flex; gap: 1rem; }
+        header nav a { color: white; text-decoration: none; font-size: 0.9rem; padding: 0.3rem 0.6rem; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }
+        header nav a:hover, header nav a.active { background-color: rgba(255, 255, 255, 0.25); color: #ffe3ec; }
+
+        /* 側邊欄樣式 */
+        aside { width: 260px; background-color: #d47a94; color: white; padding: 2rem 1.5rem; position: fixed; top: 48px; left: 0; height: calc(100vh - 48px); overflow-y: auto; box-shadow: 2px 0 10px rgba(212, 122, 148, 0.15); z-index: 1000; display: flex; flex-direction: column; justify-content: space-between; }
+        aside h1 { font-size: 1.25rem; letter-spacing: 1px; margin-bottom: 1.5rem; line-height: 1.4; }
+        aside nav { display: flex; flex-direction: column; gap: 0.5rem; }
+        aside nav a { color: white; text-decoration: none; font-size: 0.95rem; padding: 0.5rem 0.8rem; border-radius: 6px; transition: background-color 0.3s; }
+        aside nav a:hover { background-color: rgba(255, 255, 255, 0.2); color: #ffe3ec; }
+
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; }
+        .hero { background: linear-gradient(rgba(212, 122, 148, 0.65), rgba(122, 75, 93, 0.75)), url('images/banner.jpg') center/cover no-repeat; background-color: #e29ab0; color: white; text-align: center; padding: 4.5rem 1rem; }
+        .hero h2 { font-size: 2.3rem; margin-bottom: 0.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #fff5f8; }
+
+        .container { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.5rem; width: 100%; }
+        section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(212, 122, 148, 0.06); border: 1px solid #fae1ed; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .card { background: #fff6f9; border: 1px solid #fce4ec; border-radius: 10px; padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(212, 122, 148, 0.12); }
+        .card h3, .card h4 { color: #b05773; margin-bottom: 0.5rem; font-size: 1.2rem; }
+
+        footer { background-color: #61303f; color: #f7d6e0; text-align: center; padding: 1.5rem; font-size: 0.9rem; margin-top: auto; }
+
+        @media (max-width: 992px) {
+            header { position: relative; justify-content: center; }
+            aside { position: relative; width: 100%; height: auto; top: 0; }
+            aside nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem; }
+            .main-wrapper { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部導覽列 (分頁標籤) -->
+    <header>
+        <div style="font-weight: bold; font-size: 0.95rem;">📂 專題分頁選單：</div>
+        <nav>
+            <a href="index.html" class="active">1. 介紹與景點</a>
+            <a href="analysis.html">2. 策略與市場分析</a>
+            <a href="media.html">3. 影音、地圖與來源</a>
+        </nav>
+    </header>
+
+    <!-- 側邊欄導覽 -->
+    <aside>
+        <div>
+            <h1>城覓綠舟：臺中公園影展專題</h1>
+            <nav>
+                <a href="#intro">一、簡介</a>
+                <a href="#history">二、歷史文化</a>
+                <a href="#features">三、景點特色</a>
+            </nav>
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 1.5rem;">逢甲大學影展專題</div>
+    </aside>
+
+    <div class="main-wrapper">
+        <section class="hero" style="margin-bottom: 0;">
+            <h2>呼吸，就在市中心 — 臺中公園影展專題</h2>
+            <p>以「純淨綠洲」與「低度商業化」為核心，探討百年歷史古蹟與當代社群療癒的完美交會。</p>
+        </section>
+
+        <div class="container">
+            <section id="intro">
+                <h2>一、簡介</h2>
+                <p>臺中公園（中山公園）設立於 1907 年，是臺中市現存歷史最悠久的公園。總面積約 32,889 坪，園內古木參天、綠意盎然。本專案以「城覓綠舟」為題，探討現代都市人在高壓快速運轉的生活節奏中，如何透過這座市中心的自然綠洲尋找喘息空間。</p>
+            </section>
+            
+            <section id="history">
+                <h2>二、歷史文化背景</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>湖心亭的誕生 (1908)</h3>
+                        <p>建於1908年，為慶祝縱貫鐵路全線通車而興建，雙併式尖頂涼亭座落於日月湖水面上，為臺中市高度代表性的市定古蹟與地標。</p>
+                    </div>
+                    <div class="card">
+                        <h3>豐富的人文古蹟群</h3>
+                        <p>園區內融合了日治時期臺中神社遺構、抗日紀念碑，以及遷建自吳厝莊的清代傳統官式建築「更樓」，兼具深厚的歷史脈絡與文化保存價值。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <h2>三、景點特色</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>日月湖與湖心亭景觀</h3>
+                        <p>核心水景搭配虹橋與倒影，提供市民與遊客浪漫的散步與賞景視野。</p>
+                    </div>
+                    <div class="card">
+                        <h3>日月湖觀光小船體驗</h3>
+                        <p>保留傳統的划船/小船體驗，讓造訪者能從水面視角重新感受公園的悠閒氛圍。</p>
+                    </div>
+                    <div class="card">
+                        <h3>自然與古蹟並存</h3>
+                        <p>非單純草地空間，而是結合了湖泊、百年老樹、歷史遺跡與開放公共空間的多維度場域。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>台中公園介紹 · 頁面 1 / 3</p>
+            <p><small>作者:林雁慈 · 編輯日期：2026年11月05日</small></p>
+        </footer>
+    </div>
+</body>
+</html>

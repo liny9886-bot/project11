@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影音、地圖與來源 | 臺中公園影展專題</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fffafb; color: #4a3b40; line-height: 1.7; display: flex; min-height: 100vh; flex-direction: column; }
+        
+        header { background-color: #bc657e; color: white; padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1100; box-shadow: 0 2px 5px rgba(212, 122, 148, 0.15); }
+        header nav { display: flex; gap: 1rem; }
+        header nav a { color: white; text-decoration: none; font-size: 0.9rem; padding: 0.3rem 0.6rem; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }
+        header nav a:hover, header nav a.active { background-color: rgba(255, 255, 255, 0.25); color: #ffe3ec; }
+
+        aside { width: 260px; background-color: #d47a94; color: white; padding: 2rem 1.5rem; position: fixed; top: 48px; left: 0; height: calc(100vh - 48px); overflow-y: auto; box-shadow: 2px 0 10px rgba(212, 122, 148, 0.15); z-index: 1000; display: flex; flex-direction: column; justify-content: space-between; }
+        aside h1 { font-size: 1.25rem; letter-spacing: 1px; margin-bottom: 1.5rem; line-height: 1.4; }
+        aside nav { display: flex; flex-direction: column; gap: 0.5rem; }
+        aside nav a { color: white; text-decoration: none; font-size: 0.95rem; padding: 0.5rem 0.8rem; border-radius: 6px; transition: background-color 0.3s; }
+        aside nav a:hover { background-color: rgba(255, 255, 255, 0.2); color: #ffe3ec; }
+
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; }
+        .hero { background: linear-gradient(rgba(212, 122, 148, 0.65), rgba(122, 75, 93, 0.75)), url('images/banner.jpg') center/cover no-repeat; background-color: #e29ab0; color: white; text-align: center; padding: 4.5rem 1rem; }
+        .hero h2 { font-size: 2.3rem; margin-bottom: 0.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #fff5f8; }
+
+        .container { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.5rem; width: 100%; }
+        section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(212, 122, 148, 0.06); border: 1px solid #fae1ed; }
+        
+        .media-box { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-top: 1rem; }
+        .media-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        
+        ul.styled-list { list-style-type: none; padding-left: 0; }
+        ul.styled-list li { padding: 0.6rem 0; border-bottom: 1px dashed #fce4ec; }
+        ul.styled-list li a { color: #9c4762; text-decoration: none; }
+        ul.styled-list li a:hover { text-decoration: underline; }
+
+        footer { background-color: #61303f; color: #f7d6e0; text-align: center; padding: 1.5rem; font-size: 0.9rem; margin-top: auto; }
+
+        @media (max-width: 992px) {
+            header { position: relative; justify-content: center; }
+            aside { position: relative; width: 100%; height: auto; top: 0; }
+            aside nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem; }
+            .main-wrapper { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; font-size: 0.95rem;">📂 專題分頁選單：</div>
+        <nav>
+            <a href="index.html">1. 介紹與景點</a>
+            <a href="analysis.html">2. 策略與市場分析</a>
+            <a href="media.html" class="active">3. 影音、地圖與來源</a>
+        </nav>
+    </header>
+
+    <aside>
+        <div>
+            <h1>城覓綠舟：臺中公園影展專題</h1>
+            <nav>
+                <a href="#video">九、影音報導</a>
+                <a href="#map">十、位置地圖</a>
+                <a href="#sources">十一、資料來源</a>
+            </nav>
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 1.5rem;">逢甲大學影展專題</div>
+    </aside>
+
+    <div class="main-wrapper">
+        <section class="hero" style="margin-bottom: 0;">
+            <h2>影音與地圖導覽 — 臺中公園影展專題</h2>
+            <p>透過影音實地畫面與地理位置，感受百年古蹟的當代風華與文獻參考。</p>
+        </section>
+
+        <div class="container">
+            <section id="video">
+                <h2>九、影音報導</h2>
+                <p>透過下方影片認識台中公園，再比較影片畫面與本文介紹的景點。</p>
+                <div class="media-box">
+                    <iframe src="https://www.youtube.com/embed/hKBwFU5IJrc?si=RhiKneDUlrTxh_Xq&amp;start=5"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #7a5c65;">影片：台中公園，百年古蹟｜發布者：緯旅行 birdwei walk 。</figcaption>
+                <p style="margin-top: 1rem;">
+                    若播放器無法播放，請
+                    <a href="https://youtu.be/hKBwFU5IJrc?si=S_05ebdsTUHBPOw6" target="_blank" rel="noopener noreferrer">在 YouTube 觀看台中公園介紹影片（另開分頁）</a>。
+                </p>
+            </section>
+
+            <section id="map">
+                <h2>十、位置地圖：台中公園</h2>
+                <p>位於臺中市北區，地址為<strong>雙十路一段65號</strong>。下方地圖標示本文介紹的公園位置。</p>
+                <div class="media-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.767028383025!2d120.68190127512804!3d24.144818478403522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d6b9b1624e5%3A0x104e57f0c891d03b!2z6Ie65Lit5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1793797666346!5m2!1szh-TW!2stw"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+                <p style="margin-top: 1rem;"><a href="https://maps.app.goo.gl/6N5hHynYuM2qB1VT9" target="_blank" rel="noopener noreferrer">在Google地圖開啟台中公園（另開分頁）</a></p>
+            </section>
+
+            <section id="sources">
+                <h2>十一、資料來源</h2>
+                <p>本報導依下列資料整理。</p>
+                <ul class="styled-list">
+                    <li><a href="https://travel.taichung.gov.tw/zh-tw/attractions/intro/28" target="_blank" rel="noopener noreferrer">台中觀光旅遊網:台中公園</a></li>
+                    <li><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0001112&id=A12-00079" target="_blank" rel="noopener noreferrer">交通部觀光署:台中公園</a></li>
+                    <li><a href="https://youtu.be/hKBwFU5IJrc?si=f0dLRl9X56lepoxG" target="_blank" rel="noopener noreferrer">YouTube：台中公園介紹影片</a></li>
+                </ul>
+                <p><small>資料整理日期：2026年11月05日。</small></p>
+            </section>
+        </div>
+
+        <footer>
+            <p>台中公園介紹 · 頁面 3 / 3</p>
+            <p><small>作者:林雁慈 · 編輯日期：2026年11月05日</small></p>
+        </footer>
+    </div>
+</body>
+</html>

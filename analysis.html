@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策略與市場分析 | 臺中公園影展專題</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fffafb; color: #4a3b40; line-height: 1.7; display: flex; min-height: 100vh; flex-direction: column; }
+        
+        header { background-color: #bc657e; color: white; padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1100; box-shadow: 0 2px 5px rgba(212, 122, 148, 0.15); }
+        header nav { display: flex; gap: 1rem; }
+        header nav a { color: white; text-decoration: none; font-size: 0.9rem; padding: 0.3rem 0.6rem; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }
+        header nav a:hover, header nav a.active { background-color: rgba(255, 255, 255, 0.25); color: #ffe3ec; }
+
+        aside { width: 260px; background-color: #d47a94; color: white; padding: 2rem 1.5rem; position: fixed; top: 48px; left: 0; height: calc(100vh - 48px); overflow-y: auto; box-shadow: 2px 0 10px rgba(212, 122, 148, 0.15); z-index: 1000; display: flex; flex-direction: column; justify-content: space-between; }
+        aside h1 { font-size: 1.25rem; letter-spacing: 1px; margin-bottom: 1.5rem; line-height: 1.4; }
+        aside nav { display: flex; flex-direction: column; gap: 0.5rem; }
+        aside nav a { color: white; text-decoration: none; font-size: 0.95rem; padding: 0.5rem 0.8rem; border-radius: 6px; transition: background-color 0.3s; }
+        aside nav a:hover { background-color: rgba(255, 255, 255, 0.2); color: #ffe3ec; }
+
+        .main-wrapper { margin-left: 260px; flex: 1; display: flex; flex-direction: column; }
+        .hero { background: linear-gradient(rgba(212, 122, 148, 0.65), rgba(122, 75, 93, 0.75)), url('images/banner.jpg') center/cover no-repeat; background-color: #e29ab0; color: white; text-align: center; padding: 4.5rem 1rem; }
+        .hero h2 { font-size: 2.3rem; margin-bottom: 0.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #fff5f8; }
+
+        .container { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.5rem; width: 100%; }
+        section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(212, 122, 148, 0.06); border: 1px solid #fae1ed; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .card { background: #fff6f9; border: 1px solid #fce4ec; border-radius: 10px; padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(212, 122, 148, 0.12); }
+        .card h3, .card h4 { color: #b05773; margin-bottom: 0.5rem; font-size: 1.2rem; }
+
+        .table-container { overflow-x: auto; margin-top: 1rem; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        th, td { padding: 12px 15px; border-bottom: 1px solid #fce4ec; }
+        th { background-color: #d47a94; color: white; }
+        tr:nth-child(even) { background-color: #fff6f9; }
+        ul.styled-list { list-style-type: none; padding-left: 0; }
+        ul.styled-list li { padding: 0.6rem 0; border-bottom: 1px dashed #fce4ec; }
+
+        footer { background-color: #61303f; color: #f7d6e0; text-align: center; padding: 1.5rem; font-size: 0.9rem; margin-top: auto; }
+
+        @media (max-width: 992px) {
+            header { position: relative; justify-content: center; }
+            aside { position: relative; width: 100%; height: auto; top: 0; }
+            aside nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem; }
+            .main-wrapper { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; font-size: 0.95rem;">📂 專題分頁選單：</div>
+        <nav>
+            <a href="index.html">1. 介紹與景點</a>
+            <a href="analysis.html" class="active">2. 策略與市場分析</a>
+            <a href="media.html">3. 影音、地圖與來源</a>
+        </nav>
+    </header>
+
+    <aside>
+        <div>
+            <h1>城覓綠舟：臺中公園影展專題</h1>
+            <nav>
+                <a href="#comparison">四、競爭分析</a>
+                <a href="#swot">五、SWOT分析</a>
+                <a href="#segmentation">六、市場區隔</a>
+                <a href="#target">七、目標客群</a>
+                <a href="#positioning">八、市場定位</a>
+            </nav>
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 1.5rem;">逢甲大學影展專題</div>
+    </aside>
+
+    <div class="main-wrapper">
+        <section class="hero" style="margin-bottom: 0;">
+            <h2>策略與市場分析 — 臺中公園影展專題</h2>
+            <p>透過競爭者比較、SWOT、市場區隔與定位，精準切入當代社群療癒價值。</p>
+        </section>
+
+        <div class="container">
+            <section id="comparison">
+                <h2>四、競爭者分析表</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>分類項目</th>
+                                <th>臺中公園 (本專題)</th>
+                                <th>中央公園</th>
+                                <th>秋紅谷</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>風格定位</strong></td>
+                                <td>日治古典歷史風</td>
+                                <td>現代科技智慧風</td>
+                                <td>景觀生態滯洪池</td>
+                            </tr>
+                            <tr>
+                                <td><strong>核心水景活動</strong></td>
+                                <td>湖心亭與虹橋划船</td>
+                                <td>抹茶湖與橋梁 (看飛機)</td>
+                                <td>生態湖餵魚與倒影</td>
+                            </tr>
+                            <tr>
+                                <td><strong>周邊餐飲機能</strong></td>
+                                <td>一中商圈、東協廣場、第二市場</td>
+                                <td>逢甲商圈</td>
+                                <td>七期百貨商圈 (LaLaport等)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>特色優勢</strong></td>
+                                <td>百年歷史古蹟與鬧中取靜的綠洲感</td>
+                                <td>大面積運動與現代休憩空間</td>
+                                <td>都市下凹谷地觀景賞夜景</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="swot">
+                <h2>五、SWOT內外部環境分析</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>優勢 (Strengths)</h3>
+                        <p>1.超過百年歷史與高度城市辨識度（湖心亭）。<br>2.位於市中心，具備極高的可及性。<br>3.自然環境與歷史文化完美並存。</p>
+                    </div>
+                    <div class="card">
+                        <h3>劣勢 (Weaknesses)</h3>
+                        <p>1.資源雖豐富，但整體主題識別度尚顯不足。<br>2.公共綠地與商業活動容易產生衝突。<br>3.古蹟保存與日常高頻率使用需取得平衡。</p>
+                    </div>
+                    <div class="card">
+                        <h3>機會 (Opportunities)</h3>
+                        <p>1.政府政策積極推動「療癒型、共融型、永續型公園」。<br>2.社會對生活品質價值意識提升。<br>3.善用數位媒體與短影音提升年輕族群觸及。</p>
+                    </div>
+                    <div class="card">
+                        <h3>威脅 (Threats)</h3>
+                        <p>1.來自草悟道、帝國製糖廠等新興綠地的競爭。<br>2.過度商業化可能侵蝕綠洲核心價值。<br>3.大型展演活動易對環境造成干擾。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="segmentation">
+                <h2>六、市場區隔 (Market Segmentation)</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h4>日常放鬆族群</h4>
+                        <p><strong>特徵：</strong> 生活步調緊湊的在地上班族與學生。<br><strong>需求：</strong> 需要都市綠洲來釋放壓力，進行早晚散步與草皮放空。</p>
+                    </div>
+                    <div class="card">
+                        <h4>社群打卡族群</h4>
+                        <p><strong>特徵：</strong> 追求獨特美學與新鮮體驗的年輕族群。<br><strong>需求：</strong> 喜愛具特色、好拍照且能透過 IG、Threads 分享互動的景點。</p>
+                    </div>
+                    <div class="card">
+                        <h4>親子與文史漫步族群</h4>
+                        <p><strong>特徵：</strong> 家長及文史愛好者、中高齡民眾。<br><strong>需求：</strong> 尋求寓教於樂的戶外共學，或對日治古蹟進行深度漫步。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="target">
+                <h2>七、目標客群分析 (Target Audience)</h2>
+                <p>本專題將目標客群精準鎖定於<strong>「渴望身心療癒的日常放鬆族群」</strong>與<strong>「追求視覺美感的社群打卡族群」</strong>：</p>
+                <ul class="styled-list" style="margin-top: 1rem;">
+                    <li><strong>心理與行為需求：</strong> 長期承受都市高壓，習慣利用空檔到公園散步野餐，並將美景上傳至社群平台擴大聲量。</li>
+                    <li><strong>Persona 代表：</strong> 涵蓋熱愛社群記錄的 22 歲大學生，以及重視下班獨處沉澱的 37 歲在地上班族。</li>
+                </ul>
+            </section>
+
+            <section id="positioning">
+                <h2>八、市場定位 (Market Positioning)</h2>
+                <p>本專題將臺中公園定位為：<strong>「都市核心中的純粹綠洲」</strong>。透過主打「低度商業化」與「深厚百年歷史紋理」，提供兼具心靈沉澱與歷史漫步的獨特綠地體驗。</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>台中公園介紹 · 頁面 2 / 3</p>
+            <p><small>作者:林雁慈 · 編輯日期：2026年11月05日</small></p>
+        </footer>
+    </div>
+</body>
+</html>

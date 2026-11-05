@@ -1,0 +1,21 @@
+/* css/style.css */
+:root {
+  --primary-pink: #ffb6c1;
+  --light-pink: #fff0f5;
+  --dark-rose: #d87093;
+  --text-color: #4a4a4a;
+  --bg-color: #fdfbfb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft JhengHei", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
